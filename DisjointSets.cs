@@ -55,22 +55,15 @@ namespace DataStructures
         int[] parent;
         int[] rank; // height of tree
 
-        public DisjointSetUBR()
+        public DisjointSetUBR(int length)
         {
-            parent = new int[61];
-            rank = new int[61];
-        }
-
-        public DisjointSetUBR(int[] arr)
-        {
-            parent = new int[arr.Length +1];
-            rank = new int[arr.Length + 1];
+            parent = new int[length];
+            rank = new int[length];
         }
 
         public void MakeSet(int i)
         {
             parent[i] = i;
-            //rank[i] = 0; not needed in C# 
         }
 
         public int Find(int i)
